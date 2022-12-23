@@ -1,3 +1,4 @@
+import modals.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,11 +15,12 @@ public class LoginTest extends TestBase{
     @BeforeMethod
     public void init(){
         wd = new ChromeDriver();
-        wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
+        //wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
+        wd.navigate().to("https://telranedu.web.app/home");
 
     }
 
-    @Test
+  /*  @Test
     public void loginPositiveTest(){
         // open login/reg form
         WebElement loginBtn = wd.findElement(By.xpath("//a[text()='LOGIN']"));
@@ -39,8 +41,18 @@ public class LoginTest extends TestBase{
 
         // Assert
 //        pause(3);
-        Assert.assertTrue(wd.findElement(By.xpath("//a[@href='/add']"))!=null);
+        Assert.assertTrue(wd.findElement(By.cssSelector("div a:last-child"))!=null);
 
+    }*/
+    @Test
+    public void loginSuccess(){
+        User data = new User()
+                .withEmail("name851@mail.com")
+                    .withPassword("Haifa082022$");
+
+        app.getUser().openLoginRegistrationForm();
+        app.getUser().fillLoginRegistrationForm(data.getEmail(), data.getPassword());
+        app.getUser().submitLogin();
     }
 
     @AfterMethod
