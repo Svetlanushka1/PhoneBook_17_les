@@ -1,12 +1,12 @@
-import modals.User;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class RegistrationTest extends TestBase {
 
-//    WebDriver wd;
+    //    WebDriver wd;
 //
     @BeforeMethod
     public void preCondition(){
@@ -19,14 +19,11 @@ public class RegistrationTest extends TestBase {
     @Test
     public void registrationPositiveTest() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        User user = new User()
-                .withEmail("name" + i + "@mail.com")
-                .withPassword("$Abcdef12345");
-
-
+        String email = "name" + i + "@mail.com";
+        String password = "$Abcdef12345";
 
         app.getUser().openLoginRegistrationForm();
-        app.getUser().fillLoginRegistrationForm(user);
+        app.getUser().fillLoginRegistrationForm(email, password);
         app.getUser().submitRegistration();
         app.getUser().pause(3);
         Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//button")));
@@ -42,14 +39,17 @@ public class RegistrationTest extends TestBase {
         app.getUser().fillLoginRegistrationForm(email, password);
         app.getUser().submitRegistration();
         app.getUser().pause(3);
-        Assert.assertFalse(app.getUser().isElementPresent(By.xpath("//button")));
+//        Assert.assertFalse(app.getUser().isElementPresent(By.xpath("//button")));
 
+        Assert.assertTrue(app.getUser().isErrorMessageInFormat());
+        Assert.assertTrue(app.getUser().isAlertPresent());
     }
 
 
 //    @AfterMethod
 //    public void tearDown(){
-////        wd.quit();
+//        wd.quit();
+
 //    }
 
 }

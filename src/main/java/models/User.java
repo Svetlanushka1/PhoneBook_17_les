@@ -1,4 +1,4 @@
-package modals;
+package models;
 
 public class User {
     String email;

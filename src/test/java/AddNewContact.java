@@ -1,6 +1,7 @@
+import models.Contact;
+import models.User;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -19,9 +20,30 @@ public class AddNewContact extends TestBase{
             app.getUser().pause(3);
         }
     }
+    @Test(invocationCount = 5)
+    public void addNewContactPositiveTest(Contact contact) {
+        int i = (int) (System.currentTimeMillis() / 1000) % 3600;
+        Contact contact = Contact.builder()
+                .name("John" + i)
+                .lastname("Snow" + i)
+                .phone("055666777" + i)
+                .email("john" + i + "@mail.com")
+                .address("Haifa, Herzel, " + i)
+                .description("friend")
+                .build();
+
+        app.getContact().openContactForm();
+        app.getContact().fillContactForm(contact);
+        app.getContact().submitContactForm();
+
+        Assert.assertTrue(
+                app.getUser().getText(By.xpath("" +
+                        "//div[@class='contact-item_card__2SOIM'][last()]//h3")).equals(contact.getPhone())
+        );
+    }
 
     @Test
-    public void addNewContactPositiveTest(){
+    public void addNewContactPositiveTestOld(){
         app.getUser().click(By.xpath("//a[@href='/add']"));
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         String name = "John" + i;
@@ -40,8 +62,8 @@ public class AddNewContact extends TestBase{
         app.getUser().click(By.xpath("//div[@class='add_form__2rsm2']//button"));
 
         Assert.assertTrue(
-        app.getUser().getText(By.xpath("" +
-                "//div[@class='contact-item_card__2SOIM'][last()]//h3")).equals(phone)
+                app.getUser().getText(By.xpath("" +
+                        "//div[@class='contact-item_card__2SOIM'][last()]//h3")).equals(phone)
         );
     }
 

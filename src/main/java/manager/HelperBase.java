@@ -14,6 +14,7 @@ public class HelperBase {
         this.wd = wd;
     }
 
+
     public boolean isElementPresent(By locator){
         return wd.findElements(locator).size() > 0;
     }
