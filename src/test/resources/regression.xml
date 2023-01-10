@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="regressTests" verbose="1" >
+<suite name="regresstests" verbose="1" >
     <test name="regress" >
         <classes>
-            <class name="LoginTest"/>
-            <class name="AddNewContact"/>
-            <class name="RemoveContactTest"/>
-            <class name="RegistrationTest"/>
+            <class name="LoginTest" />
+            <class name="RegistrationTest" />
+            <class name="RemoveContactTest" />
+            <class name="AddNewContact" />
         </classes>
     </test>
 </suite>

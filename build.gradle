@@ -27,21 +27,27 @@ test {
 }
 
 task tests(type:Test){
-  //  def groups = System.getProperty('groups')
-  //  if(groups !=  null){
-  //      includeGroups groups}
-    def suite: String = System.getProperty('suit','') {
-        if (suite.equals('add')) {
+    useTestNG() {
+
+        def groups = System.getProperty('groups')
+        if(groups != null){
+            includeGroups groups
+        }
+
+        def suite = System.getProperty('suite','')//a var name 'suite'
+        //independence which name of the suite it reads via parameter Dsuite
+        //gradlew clean -Pbrowser=firefox -Dgroups=smokegroup -Dsmoketests tests
+        if(suite.equals('addtests')){
             suites 'src/test/resources/add.xml'
-        } else if (suite.equals('reg')) {
+        } else if(suite.equals('regtests')){
             suites 'src/test/resources/reg.xml'
-        } else if (suite.equals('smoke'))
+        } else if(suite.equals('smoketests')){
             suites 'src/test/resources/smoke.xml'
-    }
-
-
-    useTestNG(){
-        suites 'src/test/resources/testng.xml'
+        } else if(suite.equals('regresstests')){
+            suites 'src/test/resources/regression.xml'
+        } else {
+            suites 'src/test/resources/testng.xml'
+        }
     }
     if(project.hasProperty('browser')){
         systemProperty 'browser', "${browser}"

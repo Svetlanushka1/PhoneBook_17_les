@@ -1,18 +1,16 @@
 import models.Contact;
-import models.User;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class AddNewContact extends TestBase{
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
         if(app.getUser().isLogged()){
             app.getUser().pause(3);
-
-
         } else {
             app.getUser().openLoginRegistrationForm();
             app.getUser().fillLoginRegistrationForm("abc@def.com", "$Abcdef12345");
@@ -20,8 +18,8 @@ public class AddNewContact extends TestBase{
             app.getUser().pause(3);
         }
     }
-    @Test(invocationCount = 5)
-    public void addNewContactPositiveTest(Contact contact) {
+    @Test(invocationCount = 5, groups = {"positivegroup", "smokegroup"})
+    public void addNewContactPositiveTest() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         Contact contact = Contact.builder()
                 .name("John" + i)

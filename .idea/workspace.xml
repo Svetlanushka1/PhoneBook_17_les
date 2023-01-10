@@ -5,24 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcda61e6-d7ff-4643-8bee-ffbd22fb993b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/HelperContact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RemoveContactTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/reg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/regression.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/smoke.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/positivegroup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/smokegroup.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modals/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modals/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddNewContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RemoveContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RemoveContactTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/add.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/add.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/reg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/smoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

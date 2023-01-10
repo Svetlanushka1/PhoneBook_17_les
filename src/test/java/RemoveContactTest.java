@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class RemoveContactTest extends TestBase{
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
         if(!app.getUser().isLogged()){
             app.getUser().login(User.builder()
@@ -16,7 +16,7 @@ public class RemoveContactTest extends TestBase{
         }
     }
 
-    @Test
+    @Test(groups = {"positivegroup", "smokegroup"})
     public void removeOneContactPositive(){
 
         int result = app.getContact().removeOneContact();
@@ -24,7 +24,7 @@ public class RemoveContactTest extends TestBase{
 
     }
 
-    @Test
+    @Test(groups = {"positivegroup", "smokegroup"})
     public void removeAllContactsPositive(){
         app.getContact().removeAllContacts();
         Assert.assertFalse(app.getContact().isElementPresent(By.cssSelector(".contact-item_card__2SOIM")));
