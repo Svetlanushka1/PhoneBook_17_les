@@ -36,6 +36,7 @@ public class HelperContact extends HelperBase {
     }
 
     public int removeOneContact() {
+        pause(3000);
         int countBefore = countOfContacts();
         logger.info("Number of contacts before is " + countBefore);
         String phone = wd.findElement(By.cssSelector(".contact-item_card__2SOIM h3")).getText();
@@ -51,5 +52,12 @@ public class HelperContact extends HelperBase {
 
     private int countOfContacts() {
         return wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size();
+    }
+
+    public void removeAllContacts() {
+        pause(2000);
+        while(wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size()!=0){
+            removeOneContact();
+        }
     }
 }

@@ -18,7 +18,12 @@ public class AddNewContact extends TestBase{
             app.getUser().pause(3);
         }
     }
-    @Test(invocationCount = 5, groups = {"positivegroup", "smokegroup"})
+    @Test
+            //(invocationCount = 5, groups = {"positivegroup", "smokegroup"})
+                                //groups is massive of Strings(that is name of group which we will run containing a test
+    //suite - set of classes, class - set of tests
+
+
     public void addNewContactPositiveTest() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         Contact contact = Contact.builder()

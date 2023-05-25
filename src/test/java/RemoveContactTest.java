@@ -30,4 +30,5 @@ public class RemoveContactTest extends TestBase{
         Assert.assertFalse(app.getContact().isElementPresent(By.cssSelector(".contact-item_card__2SOIM")));
     }
 
+
 }

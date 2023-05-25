@@ -1,0 +1,20 @@
+08:23:19 [Test worker] INFO  manager.ApplicationManager - Tests on CHROME
+08:23:48 [Test worker] INFO  manager.HelperContact - Number of contacts before is 6
+08:23:48 [Test worker] INFO  manager.HelperContact - The deleted number is 0556667771412
+08:23:51 [Test worker] INFO  manager.HelperContact - Number of contacts after is 5
+08:23:54 [Test worker] INFO  manager.HelperContact - Number of contacts before is 5
+08:23:54 [Test worker] INFO  manager.HelperContact - The deleted number is 0556667771416
+08:23:57 [Test worker] INFO  manager.HelperContact - Number of contacts after is 4
+08:24:00 [Test worker] INFO  manager.HelperContact - Number of contacts before is 4
+08:24:00 [Test worker] INFO  manager.HelperContact - The deleted number is 0556667771417
+08:24:04 [Test worker] INFO  manager.HelperContact - Number of contacts after is 3
+08:24:07 [Test worker] INFO  manager.HelperContact - Number of contacts before is 3
+08:24:07 [Test worker] INFO  manager.HelperContact - The deleted number is 0556667771419
+08:24:10 [Test worker] INFO  manager.HelperContact - Number of contacts after is 2
+08:24:13 [Test worker] INFO  manager.HelperContact - Number of contacts before is 2
+08:24:13 [Test worker] INFO  manager.HelperContact - The deleted number is 0556667771420
+08:24:16 [Test worker] INFO  manager.HelperContact - Number of contacts after is 1
+08:24:19 [Test worker] INFO  manager.HelperContact - Number of contacts before is 1
+08:24:19 [Test worker] INFO  manager.HelperContact - The deleted number is 0556667771421
+08:24:32 [Test worker] INFO  manager.HelperContact - Number of contacts after is 0
+08:25:05 [Test worker] INFO  manager.HelperContact - Number of contacts before is 0

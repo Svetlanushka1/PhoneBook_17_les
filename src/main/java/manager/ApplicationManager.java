@@ -19,14 +19,17 @@ import java.util.concurrent.TimeUnit;
         String browser;
 
         public ApplicationManager(String browser) {
+
             this.browser = browser;
         }
 
         public HelperUser getUser() {
+
             return user;
         }
 
         public HelperContact getContact() {
+
             return contact;
         }
 
@@ -39,6 +42,7 @@ import java.util.concurrent.TimeUnit;
                 wd = new EventFiringWebDriver(new ChromeDriver());
                 logger.info("Tests on CHROME");
             }
+
             wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             wd.navigate().to("https://telranedu.web.app/home");
             user = new HelperUser(wd);

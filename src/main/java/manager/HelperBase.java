@@ -14,7 +14,6 @@ public class HelperBase {
         this.wd = wd;
     }
 
-
     public boolean isElementPresent(By locator){
         return wd.findElements(locator).size() > 0;
     }
@@ -31,7 +30,12 @@ public class HelperBase {
     }
 
     public void pause(int time){
-        wd.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+//        wd.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String getText(By locator){

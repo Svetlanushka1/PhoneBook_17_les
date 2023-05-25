@@ -1,9 +1,19 @@
 package models;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@Builder
+@ToString
+
 public class User {
     String email;
     String password;
-
+/*
     public void setEmail(String email) {
         this.email = email;
     }
@@ -30,5 +40,5 @@ public class User {
 
     public String getPassword() {
         return password;
-    }
+    }*/
 }
